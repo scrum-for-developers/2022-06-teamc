@@ -2,29 +2,32 @@ package de.codecentric.psd.worblehat.web.formdata;
 
 import de.codecentric.psd.worblehat.web.validation.ISBN;
 import de.codecentric.psd.worblehat.web.validation.Numeric;
+import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
 
 /** This class represent the form data of the add book form. */
 public class BookDataFormData {
 
-  @NotEmpty(message = "{empty.bookDataFormData.title}")
+  @NotEmpty(message = "Bitte einen Titel eingeben")
   private String title;
 
-  @NotEmpty(message = "{empty.bookDataFormData.edition}")
-  @Numeric(message = "{notvalid.bookDataFormData.edition}")
+  @NotEmpty(message = "Bitte eine Auflage eingeben")
+  @Numeric(message = "Die Auflage muss ein numerischer Wert sein")
   private String edition;
 
-  @NotEmpty(message = "{empty.bookDataFormData.yearOfPublication}")
-  @Numeric(message = "{notvalid.bookDataFormData.yearOfPublication}")
-  @Min(message = "{invalid.length.bookDataFormData.yearOfPublication}", value = 1000)
+  @NotEmpty(message = "Bitte ein Herausgabejahr angeben")
+  @Numeric(message = "Das Herausgabejahr muss ein numerischer Wert sein")
+  @Min(message = "Das Buch muss nach dem Jahr 1000 verlegt worden sein", value = 1000)
   private String yearOfPublication;
 
-  @NotEmpty(message = "{empty.bookDataFormData.isbn}")
-  @ISBN(message = "{notvalid.bookDataFormData.isbn}")
+  @NotEmpty(message = "Bitte eine ISBN eingeben")
+  @ISBN(message = "Bitte eine gültige ISBN angeben")
+  @Min(message = "Die ISBN besteht aus weniger als 10 Ziffern", value = 999999999)
+  @Max(message = "Die ISBN besteht aus mehr als 10 Ziffern", value = 1000000000)
   private String isbn;
 
-  @NotEmpty(message = "{empty.bookDataFormData.author}")
+  @NotEmpty(message = "Bitte eine_n Autor_in angeben")
   private String author;
 
   public String getYearOfPublication() {
