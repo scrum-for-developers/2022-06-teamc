@@ -24,5 +24,12 @@
 				Return all borrowed books by one member.
 			</action>
 		</release>
+
+		<release version="1.1" date="2022-20-10"
+			description="Updated techstack">
+			<action dev="herbstbikers" type="update">
+				updated bootspring
+			</action>
+		</release>
 	</body>
 </document>
