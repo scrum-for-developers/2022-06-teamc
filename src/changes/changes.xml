@@ -43,5 +43,13 @@
         WB-127 ISBN ist eindeutig Für Auflage
       </action>
     </release>
+
+      <release version="1.3.2" date="2022-10-21"
+              description="Verbesserungen im Bereich ISBN">
+      <action dev="herbstbiker" type="update">
+        WB-125 Ugrade Spring Boot 2.6.13
+      </action>
+    </release>
+
 	</body>
 </document>
