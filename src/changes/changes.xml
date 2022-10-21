@@ -31,5 +31,11 @@
         WB-104 Verbesserte Fehlermeldungen
       </action>
     </release>
+    <release version="1.3.0" date="2022-10-21"
+             description="Verbesserungen im Bereich ISBN">
+      <action dev="herbstbiker" type="update">
+        WB-117 ISBN13
+      </action>
+    </release>
 	</body>
 </document>
