@@ -13,7 +13,8 @@ Feature: Adding a new book to the library
             | title    | Sourcery        |
             | author   | Terry Pratchett |
             | year     | 1989            |
-            | isbn     | 123456789X      |
+            | isbn     | 3740814470      |
+            | isbn     | 9783740814472   |
 
     Scenario: Adding books with special characters
 
